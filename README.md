@@ -20,10 +20,9 @@ Hence Useless!
 
 ### The Problem (that doesn't exist)
 Since the origin mankind have moved forward a lot, but nobody tried to move backwards.
-So we took an initiative to turn the clock the backwards.
 
 ### The Solution (that nobody asked for)
-[How are you solving it? Keep it fun!]
+we took an initiative to turn the clock backwards.
 
 ## Technical Details
 ### Technologies/Components Used
