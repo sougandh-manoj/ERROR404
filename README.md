@@ -1,23 +1,26 @@
 
 <img width="1280" alt="readme-banner" src="https://github.com/user-attachments/assets/35332e92-44cb-425b-9dff-27bcf1023c6c">
 
-# [Project Name] 🎯
+# [Reverse Clock] 🎯
 
 
 ## Basic Details
-### Team Name: [Name]
+### Team Name: ERROR404
 
 
 ### Team Members
-- Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Team Lead: Adithyan K - SCMS school of engineering and technology
+- Member 2: Sougandh Manoj - SCMS school of engineering and technology
+- Member 3: Swaran C Santhosh - SCMS school of engineering and technology
 
 ### Project Description
-[2-3 lines about what your project does]
+Normal clocks spin clockwise in a loop, 
+to break this loop we tried to make a clock that spins anticlockwise which does nothing.
+Hence Useless!
 
 ### The Problem (that doesn't exist)
-[What ridiculous problem are you solving?]
+Since the origin mankind have moved forward a lot, but nobody tried to move backwards.
+So we took an initiative to turn the clock the backwards.
 
 ### The Solution (that nobody asked for)
 [How are you solving it? Keep it fun!]
@@ -25,15 +28,9 @@
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
-
-For Hardware:
-- [List main components]
-- [List specifications]
-- [List tools required]
+- HTML, CSS, JavaScript
+- Tailwind
+- React
 
 ### Implementation
 For Software:
@@ -47,14 +44,14 @@ For Software:
 For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+<img width="1438" alt="landing page" src="https://github.com/user-attachments/assets/d005663c-5a5f-4a3c-8d2e-c5b5a1950ee3">
+This is the landing page of our reverse clock.
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+<img width="1440" alt="code snippet" src="https://github.com/user-attachments/assets/20df7b56-78d1-4bea-a973-1c9d570e49bd">
+this is just a snippet of our code
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+<img width="1437" alt="time setting" src="https://github.com/user-attachments/assets/a5897557-d257-4fcb-8cdf-c9db07493f86">
+this shows the time setting feature
 
 # Diagrams
 ![Workflow](Add your workflow/architecture diagram here)
@@ -88,9 +85,9 @@ For Hardware:
 [Add any extra demo materials/links]
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+- Adithyan K: frontend
+- Sougandh Manoj: design
+- Swaran C santhosh: backend, testing, deployment
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
