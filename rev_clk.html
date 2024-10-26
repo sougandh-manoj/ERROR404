@@ -1,0 +1,96 @@
+<html>
+<head>
+    <title>Set Time</title>
+    <script src="https://unpkg.com/react/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="rev_clk.css">
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        function App() {
+            const [time, setTime] = React.useState({ hours: 6, minutes: 28, seconds: 55, period: 'PM' });
+
+            const handleTimeChange = (field, value) => {
+                setTime(prevTime => ({
+                    ...prevTime,
+                    [field]: value
+                }));
+            };
+
+            const handleSave = () => {
+                alert(`Time set to: ${time.hours}:${time.minutes}:${time.seconds} ${time.period}`);
+            };
+
+            const handleCancel = () => {
+                setTime({ hours: 6, minutes: 28, seconds: 55, period: 'PM' });
+            };
+
+            const getRotation = (unit, max) => (unit / max) * 360;
+
+            React.useEffect(() => {
+                const interval = setInterval(() => {
+                    setTime(prevTime => {
+                        let { hours, minutes, seconds, period } = prevTime;
+                        seconds = (seconds - 1 + 60) % 60;
+                        if (seconds === 59) {
+                            minutes = (minutes - 1 + 60) % 60;
+                            if (minutes === 59) {
+                                hours = (hours - 1 + 12) % 12;
+                                if (hours === 11) {
+                                    period = period === 'AM' ? 'PM' : 'AM';
+                                }
+                            }
+                        }
+                        return { hours, minutes, seconds, period };
+                    });
+                }, 1000);
+                return () => clearInterval(interval);
+            }, []);
+
+            return (
+                <div className="modal">
+                    <div className="clock">
+                        <div className="hand hour" style={{ transform: `rotate(${getRotation(time.hours % 12, 12) + 90}deg)` }}></div>
+                        <div className="hand minute" style={{ transform: `rotate(${getRotation(time.minutes, 60) + 90}deg)` }}></div>
+                        <div className="hand second" style={{ transform: `rotate(${getRotation(time.seconds, 60) + 90}deg)` }}></div>
+                        <div className="center-dot"></div>
+                    </div>
+                    <h2>Set time</h2>
+                    <div className="time-display">
+                        <input
+                            type="number"
+                            value={time.hours}
+                            onChange={(e) => handleTimeChange('hours', e.target.value)}
+                            className="bg-transparent text-white text-center w-16 text-2xl"
+                        />
+                        <div>:</div>
+                        <input
+                            type="number"
+                            value={time.minutes}
+                            onChange={(e) => handleTimeChange('minutes', e.target.value)}
+                            className="bg-transparent text-white text-center w-16 text-2xl"
+                        />
+                        <select
+                            value={time.period}
+                            onChange={(e) => handleTimeChange('period', e.target.value)}
+                            className="bg-transparent text-white text-center w-20 text-2xl"
+                        >
+                            <option value="AM">AM</option>
+                            <option value="PM">PM</option>
+                        </select>
+                    </div>
+                    <div className="buttons">
+                        <div className="button cancel-button" onClick={handleCancel}>Cancel</div>
+                        <div className="button save-button" onClick={handleSave}>Save</div>
+                    </div>
+                </div>
+            );
+        }
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>

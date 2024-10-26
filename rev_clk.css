@@ -1,0 +1,81 @@
+body {
+    background: linear-gradient(135deg, #0f2d1e 0%, #1a2e25 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+.modal {
+    background-color: rgba(26, 46, 37, 0.9);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    color: white;
+    width: 400px;
+    text-align: center;
+}
+.clock {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border: 5px solid white;
+    border-radius: 50%;
+    margin: 0 auto 30px;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+}
+.hand {
+    position: absolute;
+    width: 50%;
+    height: 4px;
+    background-color: white;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+}
+.hour {
+    height: 6px;
+}
+.minute {
+    height: 4px;
+}
+.second {
+    height: 2px;
+    background-color: red;
+}
+.center-dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.time-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+.time-display div {
+    margin: 0 5px;
+    font-size: 32px;
+}
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+.button {
+    padding: 15px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.cancel-button {
+    background-color: #333;
+}
+.save-button {
+    background-color: #1db954;
+}
