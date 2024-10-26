@@ -47,10 +47,10 @@ For Software:
 This is the landing page of our reverse clock.
 
 <img width="1440" alt="code snippet" src="https://github.com/user-attachments/assets/20df7b56-78d1-4bea-a973-1c9d570e49bd">
-this is just a snippet of our code
+This is just a snippet of our code.
 
 <img width="1437" alt="time setting" src="https://github.com/user-attachments/assets/a5897557-d257-4fcb-8cdf-c9db07493f86">
-this shows the time setting feature
+This shows the time setting feature.
 
 # Diagrams
 ![Workflow](Add your workflow/architecture diagram here)
